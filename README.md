@@ -4,8 +4,8 @@ This is based on the work of https://nest.parrotsec.org/build/alternate-install 
 
 ## Create VM 
 ``` 
-az group create -n myResourceGroup -l westeurop
-az vm create -n myVm -g myResourceGroup --image debian --username parrot --password superSecure123#
+az group create -n myResourceGroup -l westeurope
+az vm create -n myVm -g myResourceGroup --image debian --admin-username parrot --admin-password superSecure123#
 ``` 
 
 ## Run Extension (New or Existing VM) to deploy Parrot Security distribution
