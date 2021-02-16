@@ -1,0 +1,4 @@
+{
+    "fileUris": ["https://raw.githubusercontent.com/derdanu/parrot-debian-azure/master/parrot-install.sh"],
+    "commandToExecute": "./parrot-install.sh"
+}
