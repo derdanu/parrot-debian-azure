@@ -11,7 +11,7 @@ function core_install() {
     [ ! -f /etc/apt/sources.list.d/debian.list ] && cp /etc/apt/sources.list /etc/apt/sources.list.d/debian.list
     echo -e "deb https://mirror.parrot.sh/mirrors/parrot rolling main contrib non-free" > /etc/apt/sources.list.d/parrot.list
     echo -e "# The parrot repo is located at /etc/apt/sources.list.d/parrot.list" > /etc/apt/sources.list
-    gpg --keyserver hkp://keys.gnupg.net --recv-key 363A96A5CEA9EA27
+    wget -q -O - https://deb.parrotsec.org/parrot/misc/misc/parrotsec.gpg | gpg --import
     gpg --export team@parrotsec.org | apt-key add -
     apt-get update
     apt-get -y --force-yes -o Dpkg::Options::="--force-overwrite" install apt-parrot parrot-archive-keyring --no-install-recommends
